@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Will Youuu Beee Myyy Forever? 💗</title>
+
+  <meta
+    name="description"
+    content="A little love letter with one very important question."
+  >
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", sans-serif;
+      color: #4b2333;
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(255,255,255,.8),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255,190,210,.45),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #fff5f7 0%,
+          #ffe4ec 48%,
+          #fff8f5 100%
+        );
+
+      overflow-x: hidden;
+    }
+
+
+    body::before,
+    body::after {
+      content: "♥";
+      position: fixed;
+      z-index: -1;
+      color: rgba(214, 75, 115, .08);
+      font-size: 18rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    body::before {
+      top: -5rem;
+      left: -4rem;
+      transform: rotate(-18deg);
+    }
+
+    body::after {
+      bottom: -7rem;
+      right: -3rem;
+      transform: rotate(18deg);
+    }
+
+    .sparkles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .sparkle {
+      position: absolute;
+      color: rgba(255,255,255,.9);
+      animation: float 5s ease-in-out infinite;
+      filter: drop-shadow(
+        0 0 7px rgba(255,120,160,.45)
+      );
+    }
+
+
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 42px 0 70px;
+    }
+
+
+    .hero {
+      text-align: center;
+      padding: 38px 22px 24px;
+    }
+
+    .tiny {
+      display: inline-block;
+
+      padding: 8px 15px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,.68);
+
+      border: 1px solid rgba(255,255,255,.9);
+
+      box-shadow:
+        0 10px 30px rgba(129, 45, 76, .08);
+
+      font-size: .82rem;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+
+      color: #a94d6b;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(3.2rem, 9vw, 6.7rem);
+
+      line-height: .95;
+
+      margin: 25px auto 18px;
+
+      max-width: 850px;
+
+      color: #76283f;
+    }
+
+    .subtitle {
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      font-size: clamp(
+        1rem,
+        2.4vw,
+        1.25rem
+      );
+
+      line-height: 1.8;
+
+      color: #704253;
+    }
+
+
+    .heart {
+      width: 78px;
+      height: 78px;
+
+      margin: 28px auto 12px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,.78);
+
+      box-shadow:
+        0 18px 45px rgba(177, 54, 95, .17);
+
+      font-size: 2rem;
+
+      animation: heartbeat 1.8s infinite;
+    }
+
+    .card {
+      margin: 25px auto 0;
+
+      padding: clamp(
+        28px,
+        5vw,
+        55px
+      );
+
+      background: rgba(255,255,255,.72);
+
+      border: 1px solid rgba(255,255,255,.9);
+
+      border-radius: 34px;
+
+      box-shadow:
+        0 30px 90px rgba(121, 38, 69, .13);
+
+      backdrop-filter: blur(16px);
+    }
+
+    /* Love letter */
+
+    .letter {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(
+        1.25rem,
+        2.6vw,
+        1.55rem
+      );
+
+      line-height: 1.85;
+
+      color: #512536;
+    }
+
+    .letter p {
+      margin: 0 0 22px;
+    }
+
+    /* Question */
+
+    .question {
+      margin-top: 45px;
+
+      padding-top: 35px;
+
+      border-top:
+        1px solid rgba(
+          139,
+          57,
+          83,
+          .13
+        );
+
+      text-align: center;
+    }
+
+    .question h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(
+        2rem,
+        6vw,
+        3.6rem
+      );
+
+      margin: 0 0 10px;
+
+      color: #76283f;
+    }
+
+    .question p {
+      color: #875466;
+
+      margin-bottom: 26px;
+    }
+
+    /* Buttons */
+
+    .buttons {
+      display: flex;
+
+      gap: 14px;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+
+      font: inherit;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+    }
+
+    .yes,
+    .no {
+      min-width: 180px;
+
+      padding: 16px 28px;
+
+      border-radius: 999px;
+
+      font-size: 1.05rem;
+    }
+
+    .yes {
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d44972,
+          #b92e5d
+        );
+
+      box-shadow:
+        0 14px 28px
+        rgba(185, 46, 93, .28);
+    }
+
+    .no {
+      color: #8b3f59;
+
+      background: #fff;
+
+      border:
+        1px solid #f1c8d5;
+
+      box-shadow:
+        0 10px 25px
+        rgba(100, 30, 55, .08);
+    }
+
+    .response {
+      display: none;
+
+      margin-top: 25px;
+
+      text-align: center;
+
+      padding: 25px;
+
+      border-radius: 22px;
+
+      background: #fff0f4;
+
+      color: #7b2946;
+    }
+
+    .response.show {
+      display: block;
+
+      animation: pop .5s ease;
+    }
+
+    .response h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 2rem;
+
+      margin: 0 0 8px;
+    }
+
+    .message-area {
+      margin-top: 35px;
+
+      text-align: left;
+    }
+
+    label {
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-weight: 700;
+
+      color: #6e3348;
+    }
+
+    textarea {
+      width: 100%;
+
+      min-height: 145px;
+
+      resize: vertical;
+
+      border:
+        1px solid #f0cbd7;
+
+      border-radius: 20px;
+
+      padding: 17px;
+
+      font: inherit;
+
+      color: #542536;
+
+      background:
+        rgba(255,255,255,.82);
+
+      outline: none;
+
+      transition:
+        border .2s,
+        box-shadow .2s;
+    }
+
+    textarea:focus {
+      border-color: #d45b7d;
+
+      box-shadow:
+        0 0 0 4px
+        rgba(212,91,125,.10);
+    }
+
+    .send {
+      margin-top: 13px;
+
+      width: 100%;
+
+      padding: 16px;
+
+      border-radius: 17px;
+
+      color: white;
+
+      background: #7d2945;
+
+      box-shadow:
+        0 12px 25px
+        rgba(125,41,69,.2);
+    }
+
+    .send:disabled {
+      opacity: .7;
+      cursor: wait;
+      transform: none;
+    }
+
+    .note {
+      text-align: center;
+
+      margin-top: 15px;
+
+      font-size: .82rem;
+
+      color: #a06b7e;
+    }
+
+    footer {
+      text-align: center;
+
+      padding: 28px 0 0;
+
+      color: #a06b7e;
+
+      font-size: .82rem;
+    }
+
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      12% {
+        transform: scale(1.12);
+      }
+
+      24% {
+        transform: scale(1);
+      }
+
+      36% {
+        transform: scale(1.09);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: .45;
+      }
+
+      50% {
+        transform:
+          translateY(-18px)
+          rotate(12deg);
+
+        opacity: 1;
+      }
+    }
+
+    @keyframes pop {
+
+      from {
+        opacity: 0;
+
+        transform:
+          scale(.96);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .wrap {
+        width:
+          min(
+            100% - 20px,
+            920px
+          );
+
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding-top: 25px;
+      }
+
+      .card {
+        border-radius: 25px;
+
+        padding:
+          25px 20px;
+      }
+
+      .yes,
+      .no {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div
+    class="sparkles"
+    aria-hidden="true"
+  >
+
+    <span
+      class="sparkle"
+      style="
+        left:8%;
+        top:20%;
+        animation-delay:.2s
+      "
+    >
+      ✦
+    </span>
+
+    <span
+      class="sparkle"
+      style="
+        left:88%;
+        top:14%;
+        animation-delay:1.1s
+      "
+    >
+      ♡
+    </span>
+
+    <span
+      class="sparkle"
+      style="
+        left:14%;
+        top:72%;
+        animation-delay:2s
+      "
+    >
+      ✧
+    </span>
+
+    <span
+      class="sparkle"
+      style="
+        left:91%;
+        top:68%;
+        animation-delay:1.6s
+      "
+    >
+      ♥
+    </span>
+
+  </div>
+
+
+  <main class="wrap">
+
+    <section class="hero">
+
+      <span class="tiny">
+        A little thing from myyy heart
+      </span>
+
+      <div class="heart">
+        ♥
+      </div>
+
+      <h1>
+        Will youuu be<br>
+        myyy forever?
+      </h1>
+
+      <p class="subtitle">
+        I want youuuu to knoww howww i feel forrr youuuu🥺😘
+      </p>
+
+    </section>
+
+
+    <section class="card">
+
+      <div class="letter">
+
+        <p>
+          Myyyyy loveeee Aliyahhhh,
+        </p>
+
+        <p>
+          Somewhere between our laughs,
+          our little conversations,
+          youuuu became myyyyy favorite part of myy lifeeeee.
+        </p>
+
+        <p>
+          Youuu are the person I want to tell everything to.🥺🥺🥺
+          The person I want beside meeeee when lifeeeeee is beautiful,
+          when it's messy and on all the ordinary days.
+        </p>
+
+        <p>
+          I don't promise that every dayyyy will be perfect.
+          I promise that I want to keep choosing youuuuu,
+          keep learning youuuuu, keep making youuuuuu smile,
+          and keep building something beautiful together.
+        </p>
+
+        <p>
+          So I have one very important question...
+        </p>
+
+      </div>
+
+
+      <div class="question">
+
+        <h2>
+          Will youuu be myyyy forever love? 💍
+        </h2>
+
+        <p>
+          Take your time.
+          I really want to know what's in your heart.
+        </p>
+
+
+        <div class="buttons">
+
+          <button
+            class="yes"
+            type="button"
+            onclick="chooseAnswer('YES 💗')"
+          >
+            YES, I WILL! 💕
+          </button>
+
+          <button
+            class="no"
+            type="button"
+            onclick="chooseAnswer('NO')"
+          >
+            No
+          </button>
+
+        </div>
+
+
+        <div
+          class="response"
+          id="response"
+        >
+
+          <h3 id="responseTitle"></h3>
+
+          <p id="responseText"></p>
+
+        </div>
+
+
+        <form
+          id="loveForm"
+
+          action="https://formspree.io/f/mnnvbgqo"
+
+          method="POST"
+
+          class="message-area"
+        >
+
+          <input
+            type="hidden"
+            name="proposal_answer"
+            id="proposalAnswer"
+            value="No answer selected yet"
+          >
+
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="💗 I got a reply to my forever-love"
+          >
+
+          <label for="feelings">
+
+            And if youuu want...
+            tell meee how youuu feel 💌
+
+          </label>
+
+
+          <textarea
+            id="feelings"
+            name="her_message"
+            placeholder="
+Write anything youuu want meee to know...
+
+Your feelings,
+your thoughts,
+your little secret message to me... ♥
+"
+          ></textarea>
+
+
+          <button
+            class="send"
+            type="submit"
+          >
+            Send myy answer🥺
+          </button>
+
+
+          <div class="note">
+
+            😘😘😘
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      Made with a ridiculous amount of loveeee. ♥
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+
+    function chooseAnswer(answer) {
+
+      document.getElementById(
+        "proposalAnswer"
+      ).value = answer;
+
+
+      const response =
+        document.getElementById(
+          "response"
+        );
+
+      const title =
+        document.getElementById(
+          "responseTitle"
+        );
+
+      const text =
+        document.getElementById(
+          "responseText"
+        );
+
+
+      if (
+        answer.startsWith("YES")
+      ) {
+
+        title.textContent =
+          "You just made my whole world brighter. 💗";
+
+        text.textContent =
+          "Okay... now come here, myy forever love. 🥹💕 Your answer is ready to be sent below.";
+
+      }
+
+      else {
+
+        title.textContent =
+          "Thank youuuuu for being honest. 🤍";
+
+        text.textContent =
+          "Whatever is in your heart, youuu can tell meee here. I promise I will read every word.";
+
+      }
+
+
+      response.classList.add(
+        "show"
+      );
+
+
+      response.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    }
+
+    document
+      .getElementById("loveForm")
+      .addEventListener(
+        "submit",
+        async function(e) {
+
+          e.preventDefault();
+
+
+          const form = this;
+
+          const button =
+            form.querySelector(".send");
+
+          const answer =
+            document.getElementById(
+              "proposalAnswer"
+            ).value;
+
+
+          if (
+            answer ===
+            "No answer selected yet"
+          ) {
+
+            alert(
+              "Choose your answer first, my love 🥺💕"
+            );
+
+            return;
+
+          }
+
+
+
+          button.disabled = true;
+
+          button.textContent =
+            "Sending your love... 💌";
+
+
+          try {
+
+            const response =
+              await fetch(
+                form.action,
+                {
+                  method: "POST",
+
+                  body:
+                    new FormData(form),
+
+                  headers: {
+                    "Accept":
+                      "application/json"
+                  }
+                }
+              );
+
+
+            /*
+              SUCCESS
+            */
+
+            if (response.ok) {
+
+              // Hide original form
+
+              form.style.display =
+                "none";
+
+
+              // Create custom message
+
+              const success =
+                document.createElement(
+                  "div"
+                );
+
+
+              success.className =
+                "response show";
+
+
+              success.innerHTML = `
+
+                <h3>
+                  It's been sent to meee. 💌🥹
+                </h3>
+
+                <p>
+                  Thank youuu for sharing
+                  your heart with me.
+                  I'll treasure every word. ❤️
+                </p>
+
+                <div style="
+                  font-size: 2rem;
+                  margin-top: 15px;
+                ">
+                  💗 💕 💗
+                </div>
+
+              `;
+
+
+              // Add custom message
+
+              document
+                .querySelector(".question")
+                .appendChild(
+                  success
+                );
+
+
+              // Scroll to it
+
+              success.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+              });
+
+
+            }
+
+
+            /*
+              ERROR
+            */
+
+            else {
+
+              throw new Error(
+                "Form submission failed"
+              );
+
+            }
+
+
+          }
+
+
+          catch (error) {
+
+            button.disabled =
+              false;
+
+            button.textContent =
+              "Send myy answer🥺";
+
+
+            alert(
+              "Something went wrong while sending your message. Please try again 💗"
+            );
+
+          }
+
+        }
+      );
+
+  </script>
+
+</body>
+</html>
